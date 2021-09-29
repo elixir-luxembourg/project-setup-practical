@@ -1,0 +1,58 @@
+---
+title: "My first paper"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Abstract
+I did some work and the result is:
+
+### Todo
+Code, rmd, project setup on github/gitlab? 
+Participants need accounts - github classroom?
+Reading of data from Zenodo
+.gitignore
+
+Messy directory setup on github?
+Exercise: cleanup
+
+Learning objectives
+
+ * literature 
+ * results from coding
+ * setup
+ * practice on git, 
+ * Environment renv, 
+
+## Introduction
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r peaks}
+peaks <- read_delim("TC1-ST2-D0.12_peaks.narrowPeak", delim="\t", col_names = FALSE)
+
+my_peaks <- read_delim("https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75897/suppl/GSE75897_RPF_RPKMs.txt.gz", delim = "\t" , col_names = FALSE)
+
+pp <- read_delim("https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE75897&format=file", delim = "\t" )
+
+```
+
+## Methods
+
+
+```{r pressure, echo=FALSE}
+ggplot(peaks) + geom_histogram( aes(X8))
+```
+
+## Results
+
+We have discovered `r nrow(peaks)` peaks.
+
+## Discussion
+More research is needed.
