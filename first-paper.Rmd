@@ -56,3 +56,9 @@ We have discovered `r nrow(peaks)` peaks.
 
 ## Discussion
 More research is needed.
+
+## Tasks
+
+1. Switch the output format to Word 
+2. Select different code 
+2. Use the package `NNN` by the call 
