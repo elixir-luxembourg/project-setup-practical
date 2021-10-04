@@ -1,17 +1,4 @@
 {
-  "R": {
-    "Version": "4.0.3",
-    "Repositories": [
-      {
-        "Name": "CRAN",
-        "URL": "http://package-proxy/focal"
-      },
-      {
-        "Name": "RSPM",
-        "URL": "http://cran.rstudio.org"
-      }
-    ]
-  },
   "Packages": {
     "DBI": {
       "Package": "DBI",
