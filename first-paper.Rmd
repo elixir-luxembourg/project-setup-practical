@@ -1,6 +1,6 @@
 ---
 title: "My first paper"
-author: Hiro Protagonist, John Blue
+author: Hiro Protagonist, Roy Blue, Igor Green, Alice White, John Black
 output: html_document
 ---
 
@@ -14,27 +14,10 @@ library(tidyverse)
 ## Abstract
 I did some work and the result is:
 
-### Todo
-Code, rmd, project setup on github/gitlab? 
-Participants need accounts - github classroom?
-Reading of data from Zenodo
-.gitignore
-
-Messy directory setup on github?
-Exercise: cleanup
-
-Learning objectives
-
- * literature 
- * results from coding
- * setup
- * practice on git, 
- * Environment renv, 
 
 ## Introduction
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+CHiP-Seq makes peaks. Peaks are good.
 
 ```{r peaks}
 peaks <- read_tsv("data/TC1-ST2-D0.12_peaks.narrowPeak", 
@@ -43,14 +26,11 @@ peaks <- read_tsv("data/TC1-ST2-D0.12_peaks.narrowPeak",
                                 "strand", "signalValue", 
                                 "pValue", "qValue", "peak"))
 
-#my_peaks <- read_delim("https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75897/suppl/GSE75897_RPF_RPKMs.txt.gz", delim = "\t" , col_names = FALSE)
-
-#pp <- read_delim("https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE75897&format=file", delim = "\t" )
-
 ```
 
 ## Methods
 
+Peaks were 
 
 ```{r pressure, echo=FALSE}
 ggplot(peaks) + geom_histogram( aes(pValue), binwidth= 10)
@@ -63,27 +43,14 @@ In this example we only have chromosome 12.
 ```{r}
 count(peaks, chrom)
 ```
-## Length of peaks
-```{r peaklength}
-peaks_length <- peaks %>% mutate(length = chromEnd - chromStart)
-ggplot(peaks_length, aes(x = length)) + geom_histogram()
-```
-```{r minmaxpeak}
-peaks_length %>% 
-  summarise(min(length), max(length), round(mean(length))) %>% 
-  rename("Minimum" = `min(length)`,
-         "Maximum" = `max(length)`,
-         "Average" = `round(mean(length))`) 
-```
-## Signal Value
-```{r}
-ggplot(peaks, aes(x = signalValue)) + geom_density()
-```
-### Does the p-value correlate with the signal value?
-```{r}
-ggplot(peaks, aes(pValue, signalValue)) + geom_point() + geom_smooth(method = "lm")
-```
+## Length of peaks (distribution)
 
+## Min, max of peaks
+
+## Signal Value
+
+
+### Does the p-value correlate with the signal value?
 
 We have discovered `r nrow(peaks)` peaks.
 
