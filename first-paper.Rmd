@@ -1,5 +1,6 @@
 ---
 title: "My first paper"
+author: Hiro Protagonist, John Blue
 output: html_document
 ---
 
@@ -35,11 +36,15 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r peaks}
-peaks <- read_delim("TC1-ST2-D0.12_peaks.narrowPeak", delim="\t", col_names = FALSE)
+peaks <- read_tsv("data/TC1-ST2-D0.12_peaks.narrowPeak", 
+                  col_names = c("chrom", "chromStart", 
+                                "chromEnd", "name", "score", 
+                                "strand", "signalValue", 
+                                "pValue", "qValue", "peak"))
 
-my_peaks <- read_delim("https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75897/suppl/GSE75897_RPF_RPKMs.txt.gz", delim = "\t" , col_names = FALSE)
+#my_peaks <- read_delim("https://ftp.ncbi.nlm.nih.gov/geo/series/GSE75nnn/GSE75897/suppl/GSE75897_RPF_RPKMs.txt.gz", delim = "\t" , col_names = FALSE)
 
-pp <- read_delim("https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE75897&format=file", delim = "\t" )
+#pp <- read_delim("https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE75897&format=file", delim = "\t" )
 
 ```
 
@@ -47,10 +52,37 @@ pp <- read_delim("https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE75897&format
 
 
 ```{r pressure, echo=FALSE}
-ggplot(peaks) + geom_histogram( aes(X8))
+ggplot(peaks) + geom_histogram( aes(pValue), binwidth= 10)
 ```
 
 ## Results
+
+## Number of peaks on each chromosome
+In this example we only have chromosome 12.
+```{r}
+count(peaks, chrom)
+```
+## Length of peaks
+```{r peaklength}
+peaks_length <- peaks %>% mutate(length = chromEnd - chromStart)
+ggplot(peaks_length, aes(x = length)) + geom_histogram()
+```
+```{r minmaxpeak}
+peaks_length %>% 
+  summarise(min(length), max(length), round(mean(length))) %>% 
+  rename("Minimum" = `min(length)`,
+         "Maximum" = `max(length)`,
+         "Average" = `round(mean(length))`) 
+```
+## Signal Value
+```{r}
+ggplot(peaks, aes(x = signalValue)) + geom_density()
+```
+### Does the p-value correlate with the signal value?
+```{r}
+ggplot(peaks, aes(pValue, signalValue)) + geom_point() + geom_smooth(method = "lm")
+```
+
 
 We have discovered `r nrow(peaks)` peaks.
 
@@ -60,5 +92,6 @@ More research is needed.
 ## Tasks
 
 1. Switch the output format to Word 
-2. Select different code 
+2. Select different code bring in code from
+2. Add density plot into a new chunk
 2. Use the package `NNN` by the call 
