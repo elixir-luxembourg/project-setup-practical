@@ -3,11 +3,11 @@
 # Hi Hiro, 
 
 # here's analysis code. 
-# Don't forget to gull the repo. Enjoy.
+# Don't forget to push to the repo. Enjoy.
 # greets, j
 
 
-peaks <- read_tsv("TC1-ST2-D0.12_peaks.narrowPeak", 
+peaks <- read_tsv("data/TC1-ST2-D0.12_peaks.narrowPeak", 
                   col_names = c("chrom", "chromStart", 
                                 "chromEnd", "name", "score", 
                                 "strand", "signalValue", 
