@@ -1,5 +1,5 @@
 ---
-title: "My first paper"
+title: "ChiP-seq peaks will save planet"
 author: Hiro Protagonist, Roy Blue, Igor Green, Alice White, John Black
 output: html_document
 ---
@@ -60,6 +60,7 @@ More research is needed.
 ## Tasks
 
 1. Switch the output format to Word 
-2. Select different code bring in code from
-2. Add density plot into a new chunk
-2. Use the package `NNN` by the call 
+2. Arrange the plots in the e-mail into the main document
+3. Describe the statistics of the length of the peaks in a table
+4. Discuss the distribution of signal values and p values
+5. Include a citation
