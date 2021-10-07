@@ -1,6 +1,6 @@
-# Practical exercise on data ingestion
+# Practical exercise on data analysis
 
-In this practical, you will perform multiple steps needed on data ingestion and working environment setup. You will download the test dataset, verify its integrity and add minimal documentation. Finally, you will have data stored in optimal way for subsequent (re-)use in your future steps.
+In this practical, you will perform multiple steps needed on working environment setup for reproducible data analysis using the code versioning system `git`, systems environment management `renv` and `RMarkdown` to create reproducible documents.
 
 ## Requirements
 
