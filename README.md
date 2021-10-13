@@ -30,7 +30,7 @@ In this practical, you will perform multiple steps needed on working environment
 2. Install all packages by running command
 
    ```r
-   renv:restore()
+   renv::restore()
    ```
 
    in the **console** tab and confirm. Doing so ensures computational environment is always the same - for different users on different machines.
