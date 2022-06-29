@@ -5,16 +5,16 @@ In this practical, you will perform multiple steps needed on working environment
 ## Requirements
 
 * [Github](https://github.com) account
-* [RStudio Cloud](https://rstudio.cloud) account
+* R and RStudio or [RStudio Cloud](https://rstudio.cloud) account
 
 ## Step 1: Create your R project
 
-1. Login to the [RStudio Cloud](https://rstudio.cloud)
+1. Start RStudio or login to the [RStudio Cloud](https://rstudio.cloud)
 2. Select "New Project" -> "New Project form Git Repository"
 
     <img src='./misc/img/Rstudio-cloud_new-project.png' width=500>
 
-3. Enter the URL of this repository (`https://github.com/elixir-luxembourg/project-setup-practical`) and hit OK
+3. Enter the URL of the repository from github classroom, something like  (`https://github.com/elixir-training-luxembourg/project-setup-<githubusername>`) and hit OK
 
     <img src='./misc/img/Rstudio-cloud_repository-url.png' width=300>
 
