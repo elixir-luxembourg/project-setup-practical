@@ -1,0 +1,66 @@
+---
+title: "ChiP-seq peaks will save planet"
+author: Hiro Protagonist, Roy Blue, Igor Green, Alice White, John Black
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+```
+
+## Abstract
+I did some work and the result is:
+
+
+## Introduction
+
+CHiP-Seq makes peaks. Peaks are good.
+
+```{r peaks}
+peaks <- read_tsv("data/TC1-ST2-D0.12_peaks.narrowPeak", 
+                  col_names = c("chrom", "chromStart", 
+                                "chromEnd", "name", "score", 
+                                "strand", "signalValue", 
+                                "pValue", "qValue", "peak"))
+
+```
+
+## Methods
+
+Peaks were 
+
+```{r pressure, echo=FALSE}
+ggplot(peaks) + geom_histogram( aes(pValue), binwidth= 10)
+```
+
+## Results
+
+## Number of peaks on each chromosome
+In this example we only have chromosome 12.
+```{r}
+count(peaks, chrom)
+```
+## Length of peaks (distribution)
+
+## Min, max of peaks
+
+## Signal Value
+
+
+### Does the p-value correlate with the signal value?
+
+We have discovered `r nrow(peaks)` peaks.
+
+## Discussion
+More research is needed.
+
+## Tasks
+
+1. Switch the output format to Word 
+2. Arrange the plots in the e-mail into the main document
+3. Describe the statistics of the length of the peaks in a table
+4. Discuss the distribution of signal values and p values
+5. Include a citation
