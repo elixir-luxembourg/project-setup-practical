@@ -39,7 +39,9 @@ The project environment and all used packages will be installed in any other sys
 
 1.  In your project directory make 2 directories called **data** and **R**.
 
-2.  **Data** directory is where your ChiP-seq data should be placed.
+2.  **Data** directory is where your ChiP-seq data from previous practicals should be placed.
+
+3.  **R** directory is where you should create a new R Script and copy the code from the **analysis-code.R** from the given repository.
 
 ## Step 4: Git
 
