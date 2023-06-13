@@ -83,7 +83,7 @@ At this moment, you may want to push your changes to a remote repository (GitHub
 
 ## Literate programming
 
-1.  Open the `first-paper.qmd` file saved in your project and hit `Render`.
+1.  Open the `first-paper.qmd` file saved in your project and hit `Knit`.
 
 <img src="./misc/img/quatro_knit.png" width="300"/>
 
@@ -99,7 +99,7 @@ At this moment, you may want to push your changes to a remote repository (GitHub
 
         You can add new code chunks, update the text or add new pieces of code available in `R/analysis-code.R` file.
 
-3.  Render the document again.
+3.  Knit the document again.
 
 ## Final Assignment
 
