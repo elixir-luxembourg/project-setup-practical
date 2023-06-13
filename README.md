@@ -29,7 +29,7 @@ In the following window under Git/SVN for version control system select Git and 
 
 1.  Your data analysis will require multiple packages. To use `renv` first run `install.packages("renv")` in the **console**. To start collecting the list of used packages in the project library initialize `renv` by running `renv::init()`. Inspect the renv.lock file.
 
-2.  Install the tidyverse package `install.packages("tidyverse")`. The run `renv::snapshot` to update the renv.lock file. Take a look at it again.
+2.  Install the tidyverse package `install.packages("tidyverse")`. Then run `renv::snapshot` to update the renv.lock file. Take a look at it again.
 
 <img src="./misc/img/renv-lock-content.png" width="500"/>
 
@@ -83,7 +83,7 @@ At this moment, you may want to push your changes to a remote repository (GitHub
 
 ## Literate programming
 
-1.  Open the `first-paper.qmd` file saved in your project and hit `Knit`.
+1.  Open the `first-paper.qmd` file saved in your project and hit `Render`.
 
 <img src="./misc/img/quatro_knit.png" width="300"/>
 
@@ -99,7 +99,7 @@ At this moment, you may want to push your changes to a remote repository (GitHub
 
         You can add new code chunks, update the text or add new pieces of code available in `R/analysis-code.R` file.
 
-3.  Knit the document again.
+3.  Render the document again.
 
 ## Final Assignment
 
