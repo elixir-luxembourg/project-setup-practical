@@ -1,6 +1,6 @@
 # Practical exercise on data analysis
 
-In this practical, you will perform multiple steps needed on working environment setup for reproducible data analysis using the code versioning system `git`, systems environment management `renv` and `RMarkdown` to create reproducible documents.
+In this practical, you will perform steps needed on working environment setup for reproducible data analysis using the code versioning system `git`, systems environment management `renv` and `RMarkdown/Quarto` to create reproducible documents.
 
 ## Requirements
 
@@ -27,9 +27,9 @@ In the following window under Git/SVN for version control system select Git and 
 
 ## Step 2: Create your computational environment
 
-1.  Your data analysis will require multiple packages. To use `renv` first run `install.packages("renv")` in the **console**. To start collecting the list of used packages in the project library initialize `renv` by running `renv::init()`.
+1.  Your data analysis will require multiple packages. To use `renv` first run `install.packages("renv")` in the **console**. To start collecting the list of used packages in the project library initialize `renv` by running `renv::init()`. Inspect the renv.lock file.
 
-2.  Install packages as you go. They will be automatically written in the \*\*renv.lock\*\* file for you. The renv.lock ensures computational environment is always the same - for different users on different machines.
+2.  Install the tidyverse package `install.packages("tidyverse")`. The run `renv::snapshot` to update the renv.lock file. Take a look at it again.
 
 <img src="./misc/img/renv-lock-content.png" width="500"/>
 
@@ -41,7 +41,9 @@ The project environment and all used packages will be installed in any other sys
 
 2.  **Data** directory is where your ChiP-seq data from previous practicals should be placed.
 
-3.  **R** directory is where you should create a new R Script and copy the code from the **analysis-code.R** from the given repository.
+3.  Download the [ChiP-seq data](https://raw.githubusercontent.com/elixir-luxembourg/project-setup-practical/master/data/TC1-ST2-D0.12_peaks.narrowPeak) into the data directory.
+
+4.  **R** directory is where you should create a new R Script and copy the code from the [analysis-code.R](https://raw.githubusercontent.com/elixir-luxembourg/project-setup-practical/master/R/analysis-code.R) from the given repository.
 
 ## Step 4: Git
 
@@ -49,7 +51,7 @@ The project environment and all used packages will be installed in any other sys
 
 <img src="./misc/img/git_changes-none.png" width="300"/>
 
-2.  Create the `first-paper.qmd` file. Copy the content of the first-paper.qmd from the given repository link into this file and save it. The file should appear in **Git** tab list.
+2.  Create the `first-paper.qmd` file. Copy the content of the [first-paper.qmd](<https://github.com/elixir-luxembourg/project-setup-practical/blob/master/first-paper.qmd>) into this file and save it. The file should appear in **Git** tab list.
 
 <img src="./misc/img/git_add.png" width="300"/>
 
@@ -77,7 +79,7 @@ Now commit the change. You are prompted to review your changes. Add a commit mes
 
 <img src="./misc/img/git_history.png" width="300"/>
 
-At this moment, you might want to push your changes to the remote repository (Github) to make it available for others. This is not covered in this practical.
+At this moment, you may want to push your changes to a remote repository (GitHub or Gitlab) to share the code for others for additional development. This is not covered in this practical.
 
 ## Literate programming
 
@@ -91,9 +93,9 @@ At this moment, you might want to push your changes to the remote repository (Gi
 
     -   Describe the statistics of the length of the peaks in a table
 
-    -   Discuss the distribution of signal values and p values
+    -   Discuss the distribution of signal values and p values with one sentence that should contain the actual numbers.
 
-    -   Include a citation
+    -   Include a citation.
 
         You can add new code chunks, update the text or add new pieces of code available in `R/analysis-code.R` file.
 
