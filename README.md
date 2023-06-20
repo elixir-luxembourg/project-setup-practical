@@ -25,19 +25,22 @@ In the following window under Git/SVN for version control system select Git and 
 
 <img src="./misc/img/git_project-options.png" width="500"/>
 
-### Attention
+## Attention
 If you are using **RStudio** and you **do not** have git as an option for code versioning you need to install it on your machine following next steps.
 **Posit Cloud** users skip the installation part and please go to the **git configuration steps**.
 
 ### Git installation
 
 **For Windows**
+
 Please download Git Bash from [Git download](https://git-scm.com/downloads)
 
 **For macOS**
-Please install it (recommended) following instructions here: (http://git-scm.com/downloads).
+
+Please install it (recommended) following instructions here: http://git-scm.com/downloads.
 
 **For GNU/Linux**
+
 Please run in the terminal:
 
 ````
