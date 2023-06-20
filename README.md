@@ -78,7 +78,7 @@ The project environment and all used packages will be installed in any other sys
 
 2.  **Data** directory is where your ChiP-seq data from previous practicals should be placed.
 
-3.  Download the [ChiP-seq data](https://raw.githubusercontent.com/elixir-luxembourg/project-setup-practical/master/data/TC1-ST2-D0.12_peaks.narrowPeak) into the data directory.
+3.  Download the [ChiP-seq data](https://raw.githubusercontent.com/elixir-luxembourg/project-setup-practical/master/data/TC1-ST2-D0.12_peaks.narrowPeak) into the data directory and name it **TC1-ST2-D0.12_peaks.narrowPeak**. The location and the name of your data file are important for the analysis-code.R to work!
 
 4.  **R** directory is where you should create a new R Script and copy the code from the [analysis-code.R](https://raw.githubusercontent.com/elixir-luxembourg/project-setup-practical/master/R/analysis-code.R) from the given repository.
 
