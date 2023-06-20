@@ -33,7 +33,7 @@ If you are using **RStudio** and you **do not** have git as an option for code v
 
 **For Windows**
 
-Please download Git Bash from [Git download](https://git-scm.com/downloads)
+Please download Git Bash from [Git download](https://git-scm.com/downloads).
 
 **For macOS**
 
