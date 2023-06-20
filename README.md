@@ -25,6 +25,43 @@ In the following window under Git/SVN for version control system select Git and 
 
 <img src="./misc/img/git_project-options.png" width="500"/>
 
+### Attention
+If you are using **RStudio** and you **do not** have git as an option for code versioning you need to install it on your machine following next steps.
+**Posit Cloud** users skip the installation part and please go to the **git configuration steps**.
+
+### Git installation
+
+**For Windows**
+Please download Git Bash from [Git download](https://git-scm.com/downloads)
+
+**For macOS**
+Please install it (recommended) following instructions here: (http://git-scm.com/downloads).
+
+**For GNU/Linux**
+Please run in the terminal:
+
+````
+sudo apt-get install git
+````
+### Git configuration - for both RStudio and Posit Cloud users!
+
+To configure git in all machines and for both RStudio and Posit Cloud users, fill in the mandatory info.
+
+Type in the terminal/Bash (update name/email):
+
+````
+git config --global user.name "Firstname Lastname"
+git config --global user.email "yourEmail@server.com"
+````
+
+Check the configuration was successful by running:
+````
+git config --list
+````
+You should be able to see your user.name and user.email set accordingly.
+
+
+
 ## Step 2: Create your computational environment
 
 1.  Your data analysis will require multiple packages. To use `renv` first run `install.packages("renv")` in the **console**. To start collecting the list of used packages in the project library initialize `renv` by running `renv::init()`. Inspect the renv.lock file.
