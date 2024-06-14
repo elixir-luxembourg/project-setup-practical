@@ -83,7 +83,7 @@ The project environment and all used packages will be installed in any other sys
 
 4.  **R** directory is where you should create a new R Script and copy the code from the [analysis-code.R](https://raw.githubusercontent.com/elixir-luxembourg/project-setup-practical/master/R/analysis-code.R) from the given repository.
 
-Now that you have the analysis-code.R that uses the tidyverse package, run `renv::snapshot` to update the renv.lock file. Take a look at the renv.lock file again and notice the difference.
+Now that you have the analysis-code.R that uses the tidyverse package, run `renv::snapshot()` to update the renv.lock file. Take a look at the renv.lock file again and notice the difference.
 
 <img src="./misc/img/renv-lock-content.png" width="500"/>
 
