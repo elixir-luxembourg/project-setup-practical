@@ -67,9 +67,7 @@ You should be able to see your user.name and user.email set accordingly.
 
 ## Step 2: Create your computational environment
 
-1.  Your data analysis will require multiple packages. To use `renv` first run `install.packages("renv")` in the **console**. To start collecting the list of used packages in the project library initialize `renv` by running `renv::init()`. Inspect the renv.lock file.
-
-2.  Install the tidyverse package `install.packages("tidyverse")` that will be used in the analysis.
+Your data analysis will require multiple packages. To use `renv` first run `install.packages("renv")` in the **console**. To start collecting the list of used packages in the project library initialize `renv` by running `renv::init()`. Inspect the renv.lock file.
 
 The project environment and all used packages will be installed in any other system by running the `renv::restore()` in the **console** tab.
 
@@ -83,7 +81,10 @@ The project environment and all used packages will be installed in any other sys
 
 4.  **R** directory is where you should create a new R Script and copy the code from the [analysis-code.R](https://raw.githubusercontent.com/elixir-luxembourg/project-setup-practical/master/R/analysis-code.R) from the given repository.
 
-Now that you have the analysis-code.R that uses the tidyverse package, run `renv::snapshot()` to update the renv.lock file. Take a look at the renv.lock file again and notice the difference.
+5. Now that you have the analysis-code.R that uses the tidyverse package, you will need to install it. 
+Install the tidyverse package using the following `install.packages("tidyverse")`.
+To put it on the list of used packages in your project run `renv::snapshot()` to update the renv.lock file.
+Take a look at the renv.lock file again and notice the difference.
 
 <img src="./misc/img/renv-lock-content.png" width="500"/>
 
