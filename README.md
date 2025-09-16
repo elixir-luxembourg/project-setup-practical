@@ -37,7 +37,7 @@ Please download Git Bash from [Git download](https://git-scm.com/downloads).
 
 **For macOS**
 
-Please install it (recommended) following instructions here: http://git-scm.com/downloads.
+Please install it (recommended) following instructions here: [http://git-scm.com/downloads/mac](https://git-scm.com/downloads/mac).
 
 **For GNU/Linux**
 
